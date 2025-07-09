@@ -1,0 +1,22 @@
+title: Suspicious AnyDesk Execution
+id: dummy-id-for-workshop
+status: test
+description: Detects AnyDesk being executed from non-standard locations or with suspicious parent processes.
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith: 'AnyDesk.exe'
+    ParentImage|contains:
+      - 'cmd.exe'
+      - 'powershell.exe'
+      - 'wscript.exe'
+    CommandLine|contains:
+      - '--start-with-win'
+      - '--install'
+  condition: selection
+falsepositives:
+  - IT tools
+  - Admin installs
+level: medium
