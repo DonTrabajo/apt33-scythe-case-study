@@ -26,8 +26,8 @@ Simulate APT33 adversary behavior in a lab environment using SCYTHE modules. Thi
 ### 1. **Login to SCYTHE Platform**
 
 - URL: `https://scythe.local/login`
-- Username: `unicorn`
-- Password: `unicorn111!!!`
+- Username: `REDACTED_USERNAME`
+- Password: `REDACTED_PASSWORD`
 
 ### 2. **Create New Campaign**
 
@@ -80,7 +80,7 @@ file --create --path "%USERPROFILE%\Documents\topsecret.txt" --size 10MB --rando
 #### 🔒 Encrypt Dummy Data
 
 ```bash
-crypt --target %USERPROFILE%\Documents --password "Unicorn1337!" --encrypt --erase --recurse
+crypt --target %USERPROFILE%\Documents --password "REDACTED_PASSWORD" --encrypt --erase --recurse
 ```
 
 #### 📤 Simulate Exfiltration
@@ -139,4 +139,5 @@ controller --shutdown
 ---
 
 **Prox Offensive | Emulate. Detect. Evolve.**
+
 
