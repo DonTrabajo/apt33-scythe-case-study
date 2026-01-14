@@ -1,29 +1,21 @@
 # APT33 SCYTHE Case Study
 
-This repository documents a hands-on red vs blue exercise emulating APT33 tradecraft using the SCYTHE adversary emulation platform and Splunk for blue team detection.
+Public-safe case study of an APT33-like emulation exercise using an adversary emulation platform and defensive detections. This repo focuses on methodology and detection artifacts; step-by-step offensive commands and lab identifiers are intentionally excluded.
 
-Built and executed by [DonTrabajo](https://github.com/DonTrabajo). Released under the MIT License.
+Built and executed by DonTrabajo. Released under the MIT License.
 
-## 📌 Contents
-
-- `case-study.md`: A full walkthrough of the red team campaign, including execution steps and observed behavior.
-- `splunk-hunting-queries.md`: Translated Sigma detection logic for Splunk SPL queries.
-- `sigma-rule-discovery.yaml`: Sigma rule for LOLBAS commands like whoami, ipconfig, etc.
-- `sigma-rule-anydesk.yaml`: Sigma rule outline for detecting suspicious AnyDesk activity.
-- `LICENSE.md`: License info (MIT).
+## Contents
+- `case-study.md`: One-page public case study with ATT&CK mapping and lessons learned.
+- `emulation/apt33_emulation_plan.md`: High-level, lab-only emulation phases (no commands).
+- `emulation/attack-flow.md`: Guidance for modeling the flow without operational details.
+- `detections/`: Sigma rules used in the defender view.
+- `queries/`: Splunk hunting queries derived from Sigma logic.
+- `License.md`: License info (MIT).
 - `.gitignore`: Basic ignore patterns for text-based infosec repos.
 
-## 🔭 Summary
-
-This emulation covered:
-
-- Execution of system recon commands
-- Registry persistence
-- Event log clearing
-- Simulated ransomware encryption
-- Failed exfiltration
-- Blue team hunting using Splunk and Sigma
-
----
+## Summary
+- APT33-like behaviors are modeled at a high level for lab-only use.
+- Defensive artifacts (Sigma + Splunk) are included for detection validation.
+- Internal infrastructure details and credentials are omitted by design.
 
 Prox Offensive | Emulate. Detect. Evolve.
