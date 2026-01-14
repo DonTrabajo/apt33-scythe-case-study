@@ -5,7 +5,7 @@ Public-safe case study of an APT33-like emulation exercise using an adversary em
 Built and executed by DonTrabajo. Released under the MIT License.
 
 ## Contents
-- `case-study.md`: One-page public case study with ATT&CK mapping, lessons learned, and a [Telemetry required](case-study.md#telemetry-required) section.
+- `case-study.md`: One-page public case study with ATT&CK mapping, lessons learned, [Telemetry required](case-study.md#telemetry-required), and [Results](case-study.md#results).
 - `emulation/apt33_emulation_plan.md`: High-level, lab-only emulation phases (no commands).
 - `emulation/attack-flow.md`: Guidance for modeling the flow without operational details.
 - `detections/`: Sigma rules used in the defender view.

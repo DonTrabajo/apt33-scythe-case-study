@@ -48,6 +48,26 @@ APT33, a publicly reported threat group, was emulated at a high level. The goal 
 - Correlate user, host, and time window to reduce noise.
 - Look for new binaries paired with outbound connections or service creation.
 
+## Results
+
+### What worked
+- Process creation and command-line telemetry were the most reliable signal sources.
+- Discovery patterns mapped cleanly to `detections/` and `queries/` with minimal tuning.
+- Correlation of new binary execution plus outbound connections improved fidelity.
+- Service and persistence-related events aligned with expected emulation signals.
+
+### What produced noise
+- Legitimate IT/admin tooling triggered discovery-like patterns.
+- Approved remote access tools produced alerts similar to adversary tooling.
+- Broad query patterns required allowlisting to avoid routine admin activity.
+
+### Next iteration improvements
+- Enrich detections with parent-child process constraints.
+- Add allowlist patterns for known admin hosts and approved tools.
+- Add correlation rules with time windows across user and host context.
+- Expand queries to include lateral movement pivots.
+- Validate detections on additional lab endpoints and datasets.
+
 ## MITRE ATT&CK Mapping
 | Technique ID | Name | Where in Plan | Detection Notes |
 | --- | --- | --- | --- |
