@@ -3,3 +3,8 @@ __pycache__/
 *.log
 *.bak
 .DS_Store
+logs/
+state/
+*.jsonl
+venv/
+.venv/
