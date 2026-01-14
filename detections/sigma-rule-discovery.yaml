@@ -3,7 +3,7 @@ id: 670f5683-2ea7-478a-a690-d790bf1aaa27
 status: experimental
 description: Detects suspicious discovery LOLBAS commands.
 references:
-  - https://www.cisa.gov/sites/default/files/2023-07/aa23-187a-increased-truebot-activity-infects-us-and-canada-based-networks_2.pdf
+  - www.cisa.gov/sites/default/files/2023-07/aa23-187a-increased-truebot-activity-infects-us-and-canada-based-networks_2.pdf
 author: Tyler Casey
 date: 2024-02-29
 tags:
