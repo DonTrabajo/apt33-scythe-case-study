@@ -29,6 +29,25 @@ APT33, a publicly reported threat group, was emulated at a high level. The goal 
 - Splunk hunting queries are available in `queries/` to validate detections against lab telemetry.
 - Telemetry sources include Windows event logs, Sysmon process creation, and PowerShell logging.
 
+## Telemetry required
+
+### Data sources
+- Windows Security Event Log (logon events, account management).
+- Sysmon (process creation, network connections, image loads) if deployed.
+- EDR telemetry (process tree, command line, network).
+- DNS logs (resolver and endpoint DNS where available).
+- Proxy or web gateway logs (egress destinations and user agent).
+- Firewall or NetFlow (lateral movement visibility).
+- AnyDesk logs if remote access tooling is in scope.
+- PowerShell logging (Module and Script Block).
+
+### Expected signals and tuning notes
+- Sigma rules in `detections/` should trigger on discovery and tooling patterns.
+- False positives are likely from legitimate admin tooling and IT scripts.
+- Prefer allowlisting signed binaries and approved tool hashes where available.
+- Correlate user, host, and time window to reduce noise.
+- Look for new binaries paired with outbound connections or service creation.
+
 ## MITRE ATT&CK Mapping
 | Technique ID | Name | Where in Plan | Detection Notes |
 | --- | --- | --- | --- |
